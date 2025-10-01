@@ -1,20 +1,67 @@
-#include<stdio.h>
+#include <stdio.h>
+
+// These are function Exampal questions
+void printTable(int n); // print multiplication table of n
+void findLargest(int a, int b, int c); // find largest among three numbers
+int sum(int a, int b); // return sum of two numbers
+
 int main() {
+    // int num;
+    // printf("Enter a number to print its multiplication table: ");
+    // scanf("%d", &num);
+    // printTable(num); 
 
-    for(int i=1; i<=100; i++) {
-       int num= i;
-       int sum = 0;
+    // int a, b, c;
+    // printf("Enter three numbers: ");    
+    // scanf("%d %d %d", &a, &b, &c);
+    // findLargest(a, b, c);
 
-       while(num>0){
-        sum += num % 10;
-        num /=10;
+    // int a, b;
+    // printf("Enter two numbers to find their sum: ");
+    // scanf("%d %d", &a, &b);
+    // int s= sum(a, b);
+    // printf("Sum is %d\n",s);
+    return 0;
+}
+
+void printTable(int n) {
+    for(int i=1; i<=10; i++){
+        int result = n*i;
+        printf("%d x %d = %d\n", n, i, result);
+    }
+}
+void findLargest(int a, int b, int c) {
+    if(a >= b && a >= c) {
+        printf("%d is the largest number\n", a);
+    } else if(b >= a && b >= c) {
+        printf("%d is the largest number\n", b);
+    } else {
+        printf("%d is the largest number\n", c);
+    }
+}
+int sum(int a, int b) {
+    return a + b;
+}
+
+
+
+// #include<stdio.h>
+// int main() {
+
+//     for(int i=1; i<=100; i++) {
+//        int num= i;
+//        int sum = 0;
+
+//        while(num>0){
+//         sum += num % 10;
+//         num /=10;
        
-       }
+//        }
 
-       if( sum == 10){
-        printf("%d \n", i);
-    }
-    }
+//        if( sum == 10){
+//         printf("%d \n", i);
+//     }
+//     }
 
 // int sum=0;
 // for(int i=5; i<=50; i++) {
@@ -111,5 +158,5 @@ int main() {
     // printf("Enter the Radious of Circal "); 
     // scanf("%d", &r);
     // printf("Araea of circal is %f", 3.14*r*r);
-   return 0;
-}
+//    return 0;
+// }
