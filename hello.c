@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+// Very important Recursion function
+void printHW(int count); // print Hello World count times
+
 // These are function Exampal questions
 void printTable(int n); // print multiplication table of n
 void findLargest(int a, int b, int c); // find largest among three numbers
@@ -22,6 +25,16 @@ int main() {
     // int s= sum(a, b);
     // printf("Sum is %d\n",s);
     return 0;
+}
+
+
+// { Recursive function to print} All the work that do by loop is also done by recursion 
+void printHW(int count) {
+    if(count == 0) {
+        return;
+    }
+    printf("%d Hello World\n" , count);
+    printHW(count -1);
 }
 
 void printTable(int n) {
