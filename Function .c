@@ -1,34 +1,26 @@
 #include <stdio.h>
 
-// Very important Recursion function
-void printHW(int count); // print Hello World count times
+/////////////  Recursion function /////////////// 
+void printHW(int count); // Function 1
+int sum(int n); // Function 2
+float canvertCtoF(float c); // Function 3
+int fibonacci(int n); // Function 4
+int fibonacciLoop(n);// Function 5
 
-// These are function Exampal questions
-void printTable(int n); // print multiplication table of n
-void findLargest(int a, int b, int c); // find largest among three numbers
-int sum(int a, int b); // return sum of two numbers
+
+////////////// Normal Function's//////////////
+void printTable(int n); // Function 1
+void findLargest(int a, int b, int c); // Function 2
+
 
 int main() {
-    // int num;
-    // printf("Enter a number to print its multiplication table: ");
-    // scanf("%d", &num);
-    // printTable(num); 
-
-    // int a, b, c;
-    // printf("Enter three numbers: ");    
-    // scanf("%d %d %d", &a, &b, &c);
-    // findLargest(a, b, c);
-
-    // int a, b;
-    // printf("Enter two numbers to find their sum: ");
-    // scanf("%d %d", &a, &b);
-    // int s= sum(a, b);
-    // printf("Sum is %d\n",s);
+    //use all function in 
+    // Main fuction
     return 0;
 }
 
 
-// { Recursive function to print} All the work that do by loop is also done by recursion 
+/////////////// Recustion Function //////////////////
 void printHW(int count) {
     if(count == 0) {
         return;
@@ -37,12 +29,58 @@ void printHW(int count) {
     printHW(count -1);
 }
 
+int sum(int n) {
+    if(n == 1){
+        return 1;
+    }
+    int sum_N_num = sum(n-1);
+    int sumN = n + sum_N_num;
+    return sumN;
+}
+
+float canvertCtoF(float c) {
+    float far = (c * 9/5) + 32;
+    return far;
+}
+
+int fibonacciLoop(int n) {
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+
+    int prev1 = 0; // f(0)
+    int prev2 = 1; // f(1)
+    int current;
+
+    for(int i = 2; i <= n; i++) {
+        current = prev1 + prev2;
+        prev1 = prev2;
+        prev2 = current;
+    }
+    return current;
+}
+
+int fibonacci(int n ){
+    if(n == 0) {
+        return 0;
+    }   
+    if(n == 1) {
+        return 1;
+    }
+
+    int feb = fibonacci(n-1) + fibonacci(n-2);
+    return feb;
+}
+
+///////////////// Normal Function ////////////////////
+
+
 void printTable(int n) {
     for(int i=1; i<=10; i++){
         int result = n*i;
         printf("%d x %d = %d\n", n, i, result);
     }
 }
+
 void findLargest(int a, int b, int c) {
     if(a >= b && a >= c) {
         printf("%d is the largest number\n", a);
@@ -52,10 +90,11 @@ void findLargest(int a, int b, int c) {
         printf("%d is the largest number\n", c);
     }
 }
-int sum(int a, int b) {
-    return a + b;
-}
 
+
+
+
+//////////////////////  Extra part [As a Deleated part ] for somthing  knowlege /////////////////////////
 
 
 // #include<stdio.h>

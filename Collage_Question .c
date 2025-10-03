@@ -3,6 +3,7 @@
 
 int main() {
 
+///////////// Question 1 ////////////
     // use by switch case
 int num,status;
     printf("Enter your number: ");
@@ -30,7 +31,7 @@ int num,status;
             printf("Invalid number");
     }
 
-
+///////////// Question 2 ////////////
     char ch;
     printf("Enter a character: ");
     scanf(" %c", &ch);
@@ -45,6 +46,7 @@ int num,status;
         printf("%c is a special character", ch);
     }
 
+///////////// Question 3 ////////////
     int num ;
     printf("Enter your num: ");
     scanf("%d", &num);
@@ -59,6 +61,7 @@ int num,status;
         printf("You entered zero");
     }
     
+///////////// Question 4 ////////////
     int num1, num2, num3;
     printf("Enter First numbers: ");
     scanf(" %d", &num1);
@@ -77,7 +80,7 @@ int num,status;
         printf("%d is the largest number", num3);
     }
 
-
+///////////// Question 5 ////////////
     int num;
     printf("Enter your number: ");
     scanf("%d", &num);
