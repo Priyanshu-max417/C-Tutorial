@@ -1,9 +1,13 @@
 
 ///////////////////////// Basic  of " Pointer " ///////////////////////
 #include <stdio.h>
+// Two type of function Call ... //
+int swap(int a, int b); // Call by Value  it is change the value temporary time 
+int _swap(int *a, int* b); // call by refrance  It is change the value permanent in main function because it take adress as a argument.
+
 int main(){
 //Important about pointer////
-// '*' Use for adress  Value
+// '*' Use for  Value of adress
 //  '&' Use for adress 
  int x;
  int *ptr;
@@ -11,7 +15,6 @@ int main(){
  *ptr = 0; // asign the value of (x)  by using X's adress(*ptr)
  printf("x = %d \n",x);
  printf("*ptr = %d \n", *ptr);
-
  *ptr += 5; // (*ptr) mean's (X) variabal because (*ptr) stored X variabel adress. 
  printf("x = %d \n",x);
  printf("*ptr = %d \n", *ptr);
@@ -20,10 +23,28 @@ int main(){
  int i = 5;
  int *ptr = &i;
  int **pptr = &ptr; // it's Store  the addres of ponter(*ptr) and it is a pointer to ponter variabel and Use these (**) to write that's vareabel Name .
-
  printf("i = %d",**pptr); 
+
+ 
     return 0 ;
 }
+
+ // Call by Refrance //
+int _swap(int* a, int* b){
+    int t = *a;
+    *a = *b;
+    *b = t;
+     printf("a = %d and b = %d\n",*a,*b);
+}
+// Call by Value //
+int swap(int a, int b){
+    int t = a;
+    a = b;
+    b = t;
+    printf("a = %d and b = %d\n",a,b);
+}
+
+
 ///////////////////////////////////// New Update Ended  in 4th Octuber////////////////////////////////////////////
 
 #include <stdio.h>
