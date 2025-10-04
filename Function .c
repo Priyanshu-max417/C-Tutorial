@@ -1,7 +1,10 @@
 
 ///////////////////////// Basic  of " Pointer " ///////////////////////
-v#include <stdio.h>
+#include <stdio.h>
 int main(){
+//Important about pointer////
+// '*' Use for adress  Value
+//  '&' Use for adress 
  int x;
  int *ptr;
  ptr = &x; // store the  memory adress of (X) in (ptr) variabel   
@@ -13,9 +16,12 @@ int main(){
  printf("x = %d \n",x);
  printf("*ptr = %d \n", *ptr);
 
-(*ptr)++;
- printf("x = %d \n",x);
- printf("*ptr = %d \n", *ptr);
+ //////////////////  Pointer to Pointer ///////////////////
+ int i = 5;
+ int *ptr = &i;
+ int **pptr = &ptr; // it's Store  the addres of ponter(*ptr) and it is a pointer to ponter variabel and Use these (**) to write that's vareabel Name .
+
+ printf("i = %d",**pptr); 
     return 0 ;
 }
 ///////////////////////////////////// New Update Ended  in 4th Octuber////////////////////////////////////////////
