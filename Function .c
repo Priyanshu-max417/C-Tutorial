@@ -1,3 +1,25 @@
+
+///////////////////////// Basic  of " Pointer " ///////////////////////
+v#include <stdio.h>
+int main(){
+ int x;
+ int *ptr;
+ ptr = &x; // store the  memory adress of (X) in (ptr) variabel   
+ *ptr = 0; // asign the value of (x)  by using X's adress(*ptr)
+ printf("x = %d \n",x);
+ printf("*ptr = %d \n", *ptr);
+
+ *ptr += 5; // (*ptr) mean's (X) variabal because (*ptr) stored X variabel adress. 
+ printf("x = %d \n",x);
+ printf("*ptr = %d \n", *ptr);
+
+(*ptr)++;
+ printf("x = %d \n",x);
+ printf("*ptr = %d \n", *ptr);
+    return 0 ;
+}
+///////////////////////////////////// New Update Ended  in 4th Octuber////////////////////////////////////////////
+
 #include <stdio.h>
 
 /////////////  Recursion function /////////////// 
@@ -71,9 +93,7 @@ int fibonacci(int n ){
     return feb;
 }
 
-///////////////// Normal Function ////////////////////
-
-
+///////////////// Normal Function ///////////////////
 void printTable(int n) {
     for(int i=1; i<=10; i++){
         int result = n*i;
