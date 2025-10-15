@@ -10,9 +10,10 @@
 #include <stdio.h>
 int main()
 {
-    int marks;
-    printf("Enter your marks : ");
-    scanf("%d", &marks);
+    int marks, marks1,marks2,marks3,marks4,marks5;
+    printf("Enter your (5 Subject) marks : ");
+    scanf("%d %d %d %d %d", &marks1,&marks2,&marks3,&marks4,&marks5);
+    marks = (marks1 + marks2 + marks3 + marks4 + marks5) / 5;
     if (marks >= 90 && marks <= 100)
     {
         printf("Grade A+");
