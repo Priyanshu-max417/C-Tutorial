@@ -88,20 +88,31 @@
 ////////////////////////// statements.
 ////////////////////////// (Hint: A year is leap if divisible by 4, but not by 100, except if divisible by 400.)
 
-// #include <stdio.h>
-// int main()
-// {
-// int year;
-// printf("Enter a year : ");
-// scanf("%d", &year);
-// if((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0 )){
-//     printf("%d is a leap year", year);
-// }
-// else{
-//     printf("%d is not a leap year", year);
-// }
-//     return 0;
-// }
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    if (year % 4 == 0) {                    // Step 1: divisible by 4
+        if (year % 100 == 0) {              // Step 2: divisible by 100?
+            if (year % 400 == 0) {          // Step 3: divisible by 400?
+                printf("%d is a leap year.\n", year);
+            } else {
+                printf("%d is not a leap year.\n", year);
+            }
+        } else {
+            printf("%d is a leap year.\n", year);
+        }
+    } else {
+        printf("%d is not a leap year.\n", year);
+    }
+
+    return 0;
+}
+
 
 // ///////////////////////// Q4. Write a program to check whether the entered sides form a valid triangle.
 // ///////////////////////// If valid, further check and display whether the triangle is Equilateral, Isosceles, or Scalene
@@ -171,36 +182,36 @@
 ////////////////////////////  a right-angled triangle using nested if statements.
 ////////////////////////////  (Hint: Use Pythagoras theorem)
 
-#include <stdio.h>
-int main()
-{
-    int a, b, c;
-    printf("Enter three sides of triangle : ");
-    scanf("%d %d %d", &a, &b, &c);
-    // Chack for valid input
-    if( a>0 || b>0 || c>0){
-        // Chack for right angled triangle
-        if(a*a == b*b + c*c) {
-            printf("Right angled triangle\n");
-        }
-        else{
-            if(b*b == a*a + c*c) {
-                printf("Right angled triangle\n");
-            }
-            else{
-                if(c*c == a*a + b*b) {
-                    printf("Right angled triangle\n");
-                }
-                else{
-                    printf("Not a right angled triangle\n");
-                }
-            }
-        }
-    }
-    else{
-       printf("Valid input\n");
-    }
-}
+// #include <stdio.h>
+// int main()
+// {
+//     int a, b, c;
+//     printf("Enter three sides of triangle : ");
+//     scanf("%d %d %d", &a, &b, &c);
+//     // Chack for valid input
+//     if( a>0 || b>0 || c>0){
+//         // Chack for right angled triangle
+//         if(a*a == b*b + c*c) {
+//             printf("Right angled triangle\n");
+//         }
+//         else{
+//             if(b*b == a*a + c*c) {
+//                 printf("Right angled triangle\n");
+//             }
+//             else{
+//                 if(c*c == a*a + b*b) {
+//                     printf("Right angled triangle\n");
+//                 }
+//                 else{
+//                     printf("Not a right angled triangle\n");
+//                 }
+//             }
+//         }
+//     }
+//     else{
+//        printf("Valid input\n");
+//     }
+// }
 
 ///////////////////////// Q7. Write a program to input a date (day, month, year) and check whether the date is valid or
 ///////////////////////// invalid
