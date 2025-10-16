@@ -394,6 +394,7 @@ int main()
 ////////////////////////////  If correct, ask for transaction type (withdraw, deposit, check balance) using nested if
 ////////////////////////////  If incorrect, show “Access Denied.”
 
+
 #include <stdio.h>
 int main()
 {
@@ -409,17 +410,23 @@ int main()
         {
             printf("Thanks Your Withdraw is Done");
         }
-        else if (choice == 2)
-        {
-            printf("Thanks Your Deposit is Done");
-        }
-        else if (choice == 3)
-        {
-            printf("Your A/c Balanace = -1Cr ");
-        }
         else
         {
-            printf("Invalid transaction type");
+            if (choice == 2)
+            {
+                printf("Thanks Your Deposit is Done");
+            }
+            else
+            {
+                if (choice == 3)
+                {
+                    printf("Your Balance is -10Cr");
+                }
+                else
+                {
+                    printf("Invalid Choice");
+                }
+            }
         }
     }
     else
@@ -428,4 +435,3 @@ int main()
     }
     return 0;
 }
-
