@@ -189,7 +189,7 @@ int main()
     printf("Enter three sides of triangle : ");
     scanf("%d %d %d", &a, &b, &c);
     // Chack for valid input
-    if( a>0 || b>0 || c>0){
+    if( a>0 && b>0 && c>0){
         // Chack for right angled triangle
         if(a*a == b*b + c*c) {
             printf("Right angled triangle\n");
@@ -209,7 +209,7 @@ int main()
         }
     }
     else{
-       printf("Valid input\n");
+       printf("InValid input\n");
     }
 }
 
