@@ -211,6 +211,7 @@ int main()
     else{
        printf("InValid input\n");
     }
+    return 0 ;
 }
 
 ///////////////////////// Q7. Write a program to input a date (day, month, year) and check whether the date is valid or
