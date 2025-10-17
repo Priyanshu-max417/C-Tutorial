@@ -147,7 +147,7 @@ int main()
 #include <stdio.h>
 int main()
 {
-    int ch, result; ;
+    cher ch, result; ;
     printf("Enter a character : ");
     scanf("%c", &ch);
     if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
