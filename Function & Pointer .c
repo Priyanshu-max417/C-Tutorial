@@ -1,5 +1,5 @@
 
-///////////////////////// Basic  of " Pointer " ///////////////////////
+//////////////////////////////////// Basic  of " Pointer " //////////////////////////////////
 #include <stdio.h>
 // Two type of function Call ... //
 int swap(int a, int b); // Call by Value  it is change the value temporary time 
@@ -19,13 +19,11 @@ int main(){
  printf("x = %d \n",x);
  printf("*ptr = %d \n", *ptr);
 
- //////////////////  Pointer to Pointer ///////////////////
+ ////////////////////////////////////  Pointer to Pointer ///////////////////////////////////////
  int i = 5;
  int *ptr = &i;
  int **pptr = &ptr; // it's Store  the addres of ponter(*ptr) and it is a pointer to ponter variabel and Use these (**) to write that's vareabel Name .
  printf("i = %d",**pptr); 
-
- 
     return 0 ;
 }
 
@@ -45,11 +43,10 @@ int swap(int a, int b){
 }
 
 
-///////////////////////////////////// New Update Ended  in 4th Octuber////////////////////////////////////////////
-
+//////////////////////////////////////////////////  Function's //////////////////////////////
 #include <stdio.h>
+/////////////// Recursion function ////////////
 
-/////////////  Recursion function /////////////// 
 void printHW(int count); // Function 1
 int sum(int n); // Function 2
 float canvertCtoF(float c); // Function 3
@@ -58,6 +55,7 @@ int fibonacciLoop(n);// Function 5
 
 
 ////////////// Normal Function's//////////////
+
 void printTable(int n); // Function 1
 void findLargest(int a, int b, int c); // Function 2
 
