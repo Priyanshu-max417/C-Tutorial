@@ -406,23 +406,21 @@ int main()
         printf("1. Withdraw\n2. Deposit\n3. Check balance\n");
         printf("Enter you Choice(1-3): ");
         scanf("%d", &choice);
-        if (choice == 1)
-        {
+        if (choice == 1){
             printf("Thanks Your Withdraw is Done");
         }
-        else if(choice == 2)
-        {
+        else if(choice == 2){
             printf("Thanks Your Deposit is Done");
         }
-        else if(choice == 3)
-        {   
+        else if(choice == 3){
             printf("Your Balance is -10Cr");
         }
-        else
-        {
+        else{
              printf("Invalid Choice");
         }
-        
+    }    
+    else{
+        printf("Invalid Password!");
     }
     return 0;
 }
