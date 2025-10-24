@@ -410,28 +410,19 @@ int main()
         {
             printf("Thanks Your Withdraw is Done");
         }
+        else if(choice == 2)
+        {
+            printf("Thanks Your Deposit is Done");
+        }
+        else if(choice == 3)
+        {   
+            printf("Your Balance is -10Cr");
+        }
         else
         {
-            if (choice == 2)
-            {
-                printf("Thanks Your Deposit is Done");
-            }
-            else
-            {
-                if (choice == 3)
-                {
-                    printf("Your Balance is -10Cr");
-                }
-                else
-                {
-                    printf("Invalid Choice");
-                }
-            }
+             printf("Invalid Choice");
         }
-    }
-    else
-    {
-        printf("Access Denied");
+        
     }
     return 0;
 }
