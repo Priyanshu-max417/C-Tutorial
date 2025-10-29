@@ -17,6 +17,28 @@ for(int i = 0; i<5; i++){
     return 0;
 }
 
+//////////////////////////// Convert the array in Ascending order and Descending order
+#include <stdio.h>
+int main()
+{
+    int arr[] = {8,5,4,9,1,2};
+    int n = 6;
+    int temp;
+    
+    for(int i = 0; i<n; i++){
+        for(int j = i+1; j < n; j++){
+            if(arr[i] > arr[j]){
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    for(int i = 0; i < n; i++){
+        printf("%d indax = %d\n",i,arr[i]);
+    }
+    return 0;
+}
 //////////////////////////// Find the odd numbers in an array 
 
 #include <stdio.h>
