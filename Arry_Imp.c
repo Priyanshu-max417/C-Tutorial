@@ -17,7 +17,7 @@ for(int i = 0; i<5; i++){
     return 0;
 }
 
-//////////////////////////// Convert the array in Ascending order and Descending order
+//////////////////////////// [Shorting the arry] Convert the array in Ascending order and Descending order
 #include <stdio.h>
 int main()
 {
