@@ -17,7 +17,9 @@ for(int i = 0; i<5; i++){
     return 0;
 }
 
-//////////////////////////// [Shorting the arry] Convert the array in Ascending order and Descending order
+//////////////////////////////////////////////////////////  Important array programs for theore purpose ////////////////////////////////
+
+//////////////////////////// [Shorting the arry] array in Ascending order and Descending order
 #include <stdio.h>
 int main()
 {
@@ -39,6 +41,67 @@ int main()
     }
     return 0;
 }
+//////////////////////////// (searching by Linear Search) Search an Element in an Array 
+#include <stdio.h>
+int main()
+{
+    int arr[] = {12,16,7,18,17};
+    int n = 5;
+    int key = 18,found = 0;
+    
+    for(int i = 0; i < n-1; i++){
+        if(arr[i] == key){
+            printf("Elemant = %d is found at Indax %d\n",key,i);
+            found = 1;  //  (1 = false for (!found)) 
+            break;
+        }
+    }
+    if(!found){
+        printf("Elemant Not Found in Array");
+    }
+    return 0;
+}
+//////////////////////////// (searching by Binary Search) Search an Element in a Sorted Array
+#include <stdio.h>
+void shotF(int arr[], int n);
+int main()
+{
+    int arr[] = {12,16,25,7,19,11,9,20,22,18,17};
+    int n = 11;
+    
+    shotF(arr,n);
+    int key = 22,found = 0;
+    int low = 0, high = n-1, mid;
+    
+    while(low <= high){
+        
+        mid = (low+high)/2;
+        
+        if(arr[mid] == key){
+            printf("Element %d in Indax %d",key,low);
+            return mid;
+        }
+        else if(arr[mid] < key){
+            low = mid + 1;
+        }
+        else{
+            high = mid - 1;
+        }
+    }
+    return 0;
+}
+void shotF(int arr[], int n){
+    for(int i=0; i<n-1; i++){
+        for(int j=i+1; j<n; j++){
+            if(arr[i]>arr[j]){
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+}
+
 //////////////////////////// Find the odd numbers in an array 
 
 #include <stdio.h>
