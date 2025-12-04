@@ -130,7 +130,7 @@ int main() {
         printf("Roll Number: ");
         scanf("%d", &students[i].rollNo);
         printf("Name: ");
-        scanf("%s", &students[i].name);
+        scanf("%s", students[i].name);
         printf("Marks: ");
         scanf("%f", &students[i].marks);
     }
